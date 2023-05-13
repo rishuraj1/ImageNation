@@ -10,7 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(cyan, gray);
+  background: linear-gradient(rgb(128, 222, 234), #87CEEB);
   /* color: black; */
   margin: 5px;
   padding: 5px;
