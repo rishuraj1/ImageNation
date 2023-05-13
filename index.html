@@ -11,10 +11,8 @@
     <div class="wrapper">
       <div class="navbar">
         <div class="first-nav">
-          <a href="">
-            <img src="./assets/logo.png" alt="ImageNation" />
-          </a>
-          <a href="">Home</a>
+          <img src="./assets/logo.png" alt="ImageNation" />
+          <a href="#">Home</a>
           <a href="">Contact Us</a>
         </div>
         <div class="second-nav">
@@ -22,9 +20,98 @@
           <button type="btn">Sign up</button>
         </div>
       </div>
-      <div class="hero-section">Hero Section</div>
-      <div class="main-section">Main section</div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img
+            src="./assets/starryNight.jpg"
+            id="slide-1"
+            alt="The starry night by Vincent Van Gogh"
+          />
+          <div class="text">
+            <a
+              href="https://en.wikipedia.org/wiki/The_Starry_Night"
+              target="_blank"
+              >'The starry night' by Vincent Van Gogh</a
+            >
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img
+            src="./assets/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg"
+            id="slide-2"
+            alt="'Wanderer above the sea of fog' by Caspar David Friedrich"
+          />
+          <div class="text">
+            <a
+              href="https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog"
+              target="_blank"
+              >'Wanderer above the sea of fog' by Caspar David Friedrich</a
+            >
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img
+            src="./assets/Zygmunt_Andrychiewicz(the dying artist).jpg"
+            id="slide-3"
+            alt="'The dying artist -the last friend' by Zygmunt Andrychiewicz"
+          />
+          <div class="text">
+            <a
+              href="https://globalgrowthforum.com/the-dying-artist-a-masterpiece-by-zygmunt-andrychiewicz/"
+              target="_blank"
+              >'The dying artist -the last friend' by Zygmunt Andrychiewicz</a
+            >
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img
+            src="./assets/PicassoGuernica.jpg"
+            id="slide-4"
+            alt="'Guernica' by Pablo Picasso"
+          />
+          <div class="text">
+            <a
+              href="https://en.wikipedia.org/wiki/Guernica_(Picasso)"
+              target="_blank"
+              >'Guernica' by Pablo Picasso</a
+            >
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img
+            src="./assets/potatoEasters1.jpg"
+            id="slide-5"
+            alt="'Potato Easters' by Vincent van Gogh "
+          />
+          <div class="text">
+            <a
+              href="https://en.wikipedia.org/wiki/The_Potato_Eaters"
+              target="_blank"
+              >'Potato Easters' by Vincent van Gogh</a
+            >
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="main-section">
+        <div class="main-section-1">Hello</div>
+        <div class="main-section-2">Hii</div>
+      </div>
       <div class="footer-section">Footer</div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

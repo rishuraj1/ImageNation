@@ -1,93 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(cyan, gray);
-    color: black;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(cyan, gray);
+  /* color: black; */
+  margin: 5px;
+  padding: 5px;
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+@font-face {
+  font-family: "Burtons";
+  src: url(./assets/Burtons.otf);
+}
 
 /* Navbar */
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: teal;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .first-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .first-nav img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
 }
 
 .first-nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: teal;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .first-nav a:hover {
-    color: #ff00ff;
+  color: #ff00ff;
 }
 
 .second-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.title {
+  font-family: "Burtons", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  text-decoration: none;
 }
 
 .second-nav button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: black;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: teal;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .second-nav button:hover {
-    background: #ff00ff;
-    color: black;
+  background: #ff00ff;
+  color: cyan;
 }
 
-/* Hero Section */
+/* Paintings and painting carousel*/
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 0;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: cyan;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: magenta;
+}
+
+.text  {
+  color: cyan;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.text a {
+  color: cyan;
+  text-decoration: none;
+}
+
+.text a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main section */
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Screens */
 
