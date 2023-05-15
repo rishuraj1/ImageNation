@@ -13,6 +13,11 @@
 body {
   background: linear-gradient(#CAFAFE, #4ca1af);
   font-family: "Poppins", sans-serif;
+<<<<<<< HEAD
+=======
+  background: linear-gradient(rgb(128, 222, 234), black);
+  /* color: black; */
+>>>>>>> c6bd3c25e420e0d0e9591c774deb5c0dc6434a0f
   margin: 5px;
   padding: 5px;
 }
