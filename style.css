@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -9,9 +11,8 @@
 }
 
 body {
+  background: linear-gradient(#CAFAFE, #4ca1af);
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(rgb(128, 222, 234), #87CEEB);
-  /* color: black; */
   margin: 5px;
   padding: 5px;
 }
@@ -36,7 +37,6 @@ body {
   justify-content: space-between;
   padding: 8px 0;
   color: teal;
-  position: sticky;
   top: 0;
   z-index: 999;
   transition: all 0.3s ease;
@@ -106,12 +106,25 @@ body {
   color: cyan;
 }
 
+/* Header */
+
+.header-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: teal;
+}
+
 /* Paintings and painting carousel*/
 
 .slideshow-container {
-  max-width: 1000px;
+  width: 85%;
   position: relative;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .mySlides {
@@ -119,19 +132,20 @@ body {
 }
 
 .mySlides img {
-  width: 1000px;
-  height: 500px;
-  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: cyan;
+  color: teal;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -144,23 +158,26 @@ body {
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: magenta;
+  color: cyan;
 }
 
-.text  {
-  color: cyan;
+.text {
+  color: teal;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
 }
 
 .text a {
-  color: cyan;
+  color: teal;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .text a:hover {
@@ -169,7 +186,7 @@ body {
 }
 
 .numbertext {
-  color: white;
+  color: teal;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -195,15 +212,18 @@ body {
 /* Main section */
 
 .main-section {
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
   margin-bottom: 20px;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
+}
+
+.main-section-input {
+  border: 2px solid teal;
+  padding: 10px;
+  gap: 10px;
 }
 
 /* Screens */
-

@@ -30,3 +30,10 @@ function showSlides(n) {
 
 
 
+function openSignIn() {
+    window.location.href = "login.html";
+}
+
+function openSignUp() {
+    window.location.href = "signup.html";
+}
