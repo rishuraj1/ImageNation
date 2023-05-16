@@ -46,11 +46,10 @@ function openSignUp() {
 
 const dalleEndPoint = "https://api.openai.com/v1/images/generations"
 const reqBtn = document.getElementById("send-request");
+const imgContainer = document.getElementById("image-container");
 
 reqBtn.onclick = function () {
     const API_KEY = document.getElementById("api-key").value;
-
-    // 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
 
     const count = Number(document.getElementById("image-count").value);
 
@@ -60,7 +59,7 @@ reqBtn.onclick = function () {
         prompt: prompt,
         n: count,
         size: '1024x1024',
-        response_format: 'b64_json'
+        response_format: 'url'
     }
     // console.log(reqBody);
 
@@ -75,7 +74,19 @@ reqBtn.onclick = function () {
 
     fetch(dalleEndPoint, reqParams)
         .then(res => res.json())
-        .then(json => console.log(json));
+        .then(json => console.log(json))
+        .then(displayImage);
 }
 
-
+function displayImage(jsonData) {
+    for (i = 0; i < jsonData.data.length; i++) {
+        let imgURL = jsonData.data[i].url;
+        const imgElem = document.createElement("img");
+        imgElem.src = imgURL;
+        imgElem.style.width = "100%";
+        imgElem.style.height = "100%";
+        imgElem.style.objectFit = "cover";
+        imgElem.style.margin = "10px";
+        imgContainer.appendChild(imgElem);
+    }
+}
