@@ -17,7 +17,6 @@
           <a href="#">Home</a>
           <a href="">Contact Us</a>
         </div>
-        
       </div>
       <div class="header-quote">
         <h3>
@@ -116,26 +115,64 @@
       <section>
         <div class="main-section">
           <div class="main-section-input">
-            <form action="">
-              <label for="name">Name: </label>
-              <input type="text" placeholder="John Doe" />
-              <br />
-              <label for="prompt">Prompt: </label>
-              <textarea name="prompt" id="prompt" cols="30" rows="5" placeholder="Enter the Prompt"></textarea>
-            </form>
-            <button type="btn">Submit</button>
+            <label for="name">Name: </label>
+            <input id="user-name" type="text" placeholder="John Doe" />
+            <div>
+              Please Enter your own Open AI API key, you can generate one from
+              here:
+              <a
+                target="_blank"
+                href="https://platform.openai.com/account/api-keys"
+                >Open AI api key</a
+              >
+              <input
+                id="api-key"
+                type="text"
+                value=""
+                placeholder="Enter your API key here"
+              />
+            </div>
+            <br />
+            <label for="prompt">Prompt: </label>
+            <textarea
+              name="prompt"
+              id="image-prompt"
+              cols="30"
+              rows="5"
+              placeholder="A starry night"
+            ></textarea>
+            <label for="number">Number of images: </label>
+            <input
+              id="image-count"
+              type="number"
+              placeholder="(1-4)"
+              min="1"
+              max="4"
+            />
+            <button id="send-request" type="button">
+              Realize your imagination
+            </button>
           </div>
-          <div class="main-section-output">output here</div>
+          <div class="main-section-output">
+            <fieldset>
+              <legend>Status</legend>
+              <div id="req-status">
+                <p id="req-status-value">Waiting for request</p>
+              </div>
+            </fieldset>
+
+            <!-- Response images -->
+            <div id="image-container"></div>
+          </div>
         </div>
       </section>
 
       <!-- Footer section -->
 
       <section>
-
         <div class="footer-section">Footer</div>
       </section>
-      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
