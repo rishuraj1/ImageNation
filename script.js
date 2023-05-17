@@ -49,6 +49,8 @@ const reqBtn = document.getElementById("send-request");
 const imgContainer = document.getElementById("image-container");
 
 reqBtn.onclick = function () {
+    const reqStat = document.getElementById("req-status-value");
+    reqStat.innerText = "Processing...";
     const API_KEY = document.getElementById("api-key").value;
 
     const count = Number(document.getElementById("image-count").value);
@@ -74,19 +76,53 @@ reqBtn.onclick = function () {
 
     fetch(dalleEndPoint, reqParams)
         .then(res => res.json())
-        .then(json => console.log(json))
-        .then(displayImage);
+        // .then(json => console.log(json))
+        .then(displayImages)
+        // .then(downloadData)
+        .catch(err => reqStat.innerText = "error!");
+
 }
 
-function displayImage(jsonData) {
-    for (i = 0; i < jsonData.data.length; i++) {
-        let imgURL = jsonData.data[i].url;
-        const imgElem = document.createElement("img");
-        imgElem.src = imgURL;
-        imgElem.style.width = "100%";
-        imgElem.style.height = "100%";
-        imgElem.style.objectFit = "cover";
-        imgElem.style.margin = "10px";
-        imgContainer.appendChild(imgElem);
+function displayImages(jsonData) {
+    try {
+        const reqStat = document.getElementById("req-status-value");
+        reqStat.innerText = "Done";
+
+        const images = jsonData.data;
+        // console.log(images);
+        images.forEach(img => {
+            const imgURL = img.url;
+            const imgDiv = document.createElement("div");
+            imgDiv.classList.add("image-div");
+            const imgTag = document.createElement("img");
+            const download = document.createElement("button");
+            download.innerText = "Download";
+            download.classList.add("download-btn");
+
+            imgTag.src = imgURL;
+            imgDiv.prepend(imgTag);
+            imgDiv.append(download);
+            imgContainer.prepend(imgDiv);
+
+            download.addEventListener("click", () => {
+                downloadImg(imgURL);
+            })
+
+            function downloadImg (imgURl) {
+                let newTab = window.open();
+                newTab.document.write(`<img src="${imgURL}" style="width: 100%; height: 100vh; object-fit: contain;" />`)
+                
+                newTab.focus();
+                newTab.onload = function () {
+                    newTab.document.execCommand("SaveAs", true, imgURL);
+                    newTab.close();
+                }
+            }
+        });
+
+    } catch (err) {
+        console.log(err);
     }
 }
+
+
