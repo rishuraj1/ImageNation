@@ -39,6 +39,7 @@ function openSignUp() {
 }
 
 
+
 // Open AI Section
 
 
@@ -76,9 +77,7 @@ reqBtn.onclick = function () {
 
     fetch(dalleEndPoint, reqParams)
         .then(res => res.json())
-        // .then(json => console.log(json))
         .then(displayImages)
-        // .then(downloadData)
         .catch(err => reqStat.innerText = "error!");
 
 }
@@ -89,7 +88,7 @@ function displayImages(jsonData) {
         reqStat.innerText = "Done";
 
         const images = jsonData.data;
-        // console.log(images);
+
         images.forEach(img => {
             const imgURL = img.url;
             const imgDiv = document.createElement("div");
@@ -108,15 +107,8 @@ function displayImages(jsonData) {
                 downloadImg(imgURL);
             })
 
-            function downloadImg (imgURl) {
-                let newTab = window.open();
-                newTab.document.write(`<img src="${imgURL}" style="width: 100%; height: 100vh; object-fit: contain;" />`)
-                
-                newTab.focus();
-                newTab.onload = function () {
-                    newTab.document.execCommand("SaveAs", true, imgURL);
-                    newTab.close();
-                }
+            function downloadImg(imgURl) {
+
             }
         });
 
