@@ -229,13 +229,15 @@ body {
 }
 
 .main-section-input {
-  border: 2px solid teal;
+  background: teal;
+  border: 2px solid cyan;
+  box-shadow: 0 0 10px cyan;
   width: 50%;
   padding: 10px;
   gap: 10px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   border-radius: 5px;
 }
@@ -244,12 +246,13 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: teal;
-  color: white;
+  background: cyan;
+  color: teal;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 4px;
 }
 
 .main-section-input button:hover {
@@ -265,7 +268,20 @@ body {
   outline: none;
   font-size: 18px;
   font-weight: bold;
+  background: cyan;
   color: teal;
+}
+
+.main-section-input textarea {
+  background: cyan;
+  color: teal;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid teal;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .main-section-input input:focus {
@@ -356,6 +372,52 @@ body {
 .download-btn:hover {
   background: #ff00ff;
   color: cyan;
+}
+
+/* About */
+
+.about-section {
+  background: teal;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px cyan;
+  width: 100%;
+  color: cyan;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.about-section h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: bold;
+  color: cyan;
+}
+
+.about-section p {
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  color: cyan;
+}
+
+.about-section a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.about-section a:hover {
+  color: #ffffff;
 }
 
 /* Footer */
