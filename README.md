@@ -20,17 +20,18 @@ Navigate to the project directory:
 
 ```cd ImageNation```
 
-Open the index.html file in your preferred web browser.
+Open the ```index.html``` file in your preferred web browser.
 
 # Usage
-Open the web application in your web browser.
-Enter your OpenAI API key in the designated input field.
-Provide a prompt or description for the desired image in the provided input field.
-Click on the "Generate Image" button.
-Wait for the image generation process to complete.
-Once the image is generated, it will be displayed on the screen.
-Optionally, you can click on the "Download" button to save the generated image to your device.
-Configuration
+- Open the web application in your web browser.
+- Enter your OpenAI API key in the designated input field.
+- Provide a prompt or description for the desired image in the provided input field.
+- Click on the "Generate Image" button.
+- Wait for the image generation process to complete.
+- Once the image is generated, it will be displayed on the screen.
+- Optionally, you can click on the "Download" button to save the generated image to your device.
+
+# Configuration
 To configure the project, you need to provide your OpenAI API key. 
 
 This can be done by following these steps:
