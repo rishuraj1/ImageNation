@@ -2,6 +2,9 @@
 
 This project is a web application that utilizes HTML, CSS, and JavaScript to generate images using the OpenAI API. It takes user input in the form of prompts and an OpenAI API key, and then uses the OpenAI API to generate images based on the provided prompts. The generated images can be viewed and downloaded by the user.
 
+<img width="960" alt="image" src="https://github.com/rishuraj1/ImageNation/assets/47839626/9f7962c0-3d2b-4ba5-85d5-2184e60fa020">
+
+
 # Features
 - User-friendly interface for inputting prompts and API key
 - Integration with the OpenAI API to generate images
