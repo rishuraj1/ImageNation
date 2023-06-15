@@ -39,6 +39,21 @@ function openSignUp() {
 }
 
 
+function goToGithub() {
+    window.open("https://github.com/rishuraj1/ImageNation", "_blank");
+}
+
+function goToMyLinkedin() {
+    window.open("https://www.linkedin.com/in/rishu-raj-b380041a1/", "_blank");
+}
+
+function goToMyGithub() {
+    window.open("https://github.com/rishuraj1", "_blank");
+}
+function goToMyTwitter() {
+    window.open("https://twitter.com/rrishu561", "_blank");
+}
+
 
 // Open AI Section
 

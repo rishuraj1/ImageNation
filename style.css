@@ -422,6 +422,102 @@ body {
 
 /* Footer */
 
+.footer-section {
+  background: teal;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px cyan;
+  width: 100%;
+  color: cyan;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 100px; 
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin {
+  width: 30px;
+  height: 30px;
+  fill: cyan;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.linkedin:hover {
+  fill: #0A66C2;
+}
+
+.github {
+  width: 30px;
+  height: 30px;
+  fill: cyan;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.github:hover {
+  fill: #211F1F;
+}
+
+.twitter {
+  width: 30px;
+  height: 30px;
+  fill: cyan;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.twitter:hover {
+  fill: #1DA1F2;
+}
+
+.contribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contribution a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contri-para {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;  
+} 
+
 /* Screens */
 
 @media screen and (max-width: 550px) {
